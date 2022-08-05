@@ -1,0 +1,10 @@
+{% block title %}New Portofolio
+{% endblock %}
+
+{% block body %}
+	<h1>Create new Portofolio</h1>
+
+	{{ include('portofolio/_form.html.twig') }}
+
+	<a href="{{ path('app_portofolio_index') }}">back to list</a>
+{% endblock %}

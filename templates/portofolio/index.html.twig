@@ -1,0 +1,40 @@
+{% block title %}Portofolio index
+{% endblock %}
+
+{% block body %}
+	<h1>Portofolio index</h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Titre</th>
+				<th>Demo</th>
+				<th>Image</th>
+				<th>UpdatedAt</th>
+				<th>actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for portofolio in portofolios %}
+				<tr>
+					<td>{{ portofolio.id }}</td>
+					<td>{{ portofolio.titre }}</td>
+					<td>{{ portofolio.demo }}</td>
+					<td>{{ portofolio.image }}</td>
+					<td>{{ portofolio.updatedAt ? portofolio.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+					<td>
+						<a href="{{ path('app_portofolio_show', {'id': portofolio.id}) }}">show</a>
+						<a href="{{ path('app_portofolio_edit', {'id': portofolio.id}) }}">edit</a>
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="6">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{ path('app_portofolio_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Demande index{% endblock %}
+
+{% block body %}
+    <h1>Demande index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Societe</th>
+                <th>Fullname</th>
+                <th>Secteur</th>
+                <th>Ville</th>
+                <th>Tele</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for demande in demandes %}
+            <tr>
+                <td>{{ demande.id }}</td>
+                <td>{{ demande.societe }}</td>
+                <td>{{ demande.fullname }}</td>
+                <td>{{ demande.secteur }}</td>
+                <td>{{ demande.ville }}</td>
+                <td>{{ demande.tele }}</td>
+                <td>{{ demande.email }}</td>
+                <td>{{ demande.message }}</td>
+                <td>
+                    <a href="{{ path('app_demande_show', {'id': demande.id}) }}">show</a>
+                    <a href="{{ path('app_demande_edit', {'id': demande.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_demande_new') }}">Create new</a>
+{% endblock %}
