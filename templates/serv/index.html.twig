@@ -76,23 +76,23 @@
 							<div class="links">
 								<ul>
 									<li>
-										<a href="{{ path( 'app_serv') }}">Home</a>
+										<a href="{{ path( 'app_serv') }}">Accueil</a>
 									</li>
 									<li>
 										<a href="#services">Services</a>
 									</li>
-
 									<li>
-										<a href="#about">About</a>
+										<a href="#about">Qui sommes-nous?</a>
 									</li>
 									<li>
 										<a href="{{ path( 'app_demande_new') }}">Start Project</a>
 									</li>
 									<li>
-										<a href="#team">Our Team</a>
+										<a href="#team">L'équipe</a>
 									</li>
-
 									<a href="{{ path( 'app_contact_new') }}" class="nav-item nav-link">Contact</a>
+
+
 								</div>
 							</ul>
 						</div>
@@ -106,12 +106,17 @@
 				<div class="header-content">
 					<div class="container grid-2">
 						<div class="column-1">
-							<h1 class="header-title">Who Are Us?
+							<h1 class="header-title">Plonger
+							</h1>
+							<h1 class="header-title" style=" margin-top:15px;">
+								dans le digital
 							</h1>
 							<p class="text">
-								We are a team of Web development. We have extensive experience in an area as diverse as the framework of php (symphony,Laravel), ASP.NET,python (Flask, Django),javascript(Angular)
+								Webmaker vous accompagne dans un processus de digitalisation professionel et efficace, dès le choix de la technologie convenable jusqu'à ce 
+																																																																																																																																																																																																																																																																																																															que vous vous dévoiler au monde.
 							</p>
-							<a href="#services" class="btn">SERVICES</a>
+							<a href="#services" class="btn">
+								SERVICES</a>
 						</div>
 
 						<div class="column-2 image">
@@ -172,7 +177,7 @@
 
 				<div class="container">
 					<div class="section-header">
-						<h3 class="title" data-title="Us works">Portfolio</h3>
+						<h3 class="title" data-title="Nos Realisation">PorteFeuille</h3>
 					</div>
 
 					<div class="section-body">
@@ -194,7 +199,7 @@
 									<div class="gallery-image">
 										<img src="{{ vich_uploader_asset(portofolio, 'imageFile')}}" alt=""/>
 										<div class="img-overlay">
-											<div class="plus"></div>
+
 											<div class="img-description">
 												<h3>{{ portofolio.titre }}</h3>
 												<h5>{{ portofolio.demo }}</h5>
@@ -207,7 +212,7 @@
 
 						</div>
 						<div class="more-folio">
-							<a href="{{ path( 'app_demande_new') }}" class="btn">START PROJECT
+							<a href="{{ path( 'app_demande_new') }}" class="btn">Commencer projet
 							</a>
 						</div>
 					</div>
@@ -217,7 +222,7 @@
 			<section class="about section" id="about">
 				<div class="container">
 					<div class="section-header">
-						<h3 class="title" data-title="Who we are">About Us</h3>
+						<h3 class="title" data-title="Who we are">Qui sommes-nous ?</h3>
 					</div>
 
 					<div class="section-body grid-2">
@@ -227,15 +232,16 @@
 								<b style="color: crimson">WEBMAKER ?</b>
 							</h3>
 							<p class="text">
-								At WEBMAKER, we specialize in website creation and SEO, web and desktop application development and digital marketing solutions, as well as web hosting and domain name 
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												Thanks to our expertise, we create high-performance and tailor-made solutions that effectively meet your needs and expectations.
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												Quality, performance and ergonomics are the characteristics that we respect in our achievements. In coordination with the client, we start from the need to create the right solution, while going through a rich process of reflection and planning.
+								Nous spécialisons dans la création des sites internet, des applications web et les solutions du marketing
+																																																																																																																																																																																																																																																																																															digital.
+																																																																																																																																																																																																																																																																																															Nous sommes une équipe de profils créatifs, curieux et passionés par le web. Capable de partager l'imagination de vos
+																																																																																																																																																																																																																																																																																															idées et projets web afin de leur donner vie. Sa priorité est la communication et l'identification précise
+																																																																																																																																																																																																																																																																																															de votre problématique ainsi qu'au but autant qu'à la technique pour répondre au meilleur à vos besoins et
+																																																																																																																																																																																																																																																																																															de vous accompagner à les réaliser.
 
 							</p>
 							<div class="skills"></div>
-							<a href="{{ path( 'app_demande_new') }}" class="btn">Let's Start Project</a>
+							<a href="{{ path( 'app_demande_new') }}" class="btn">On Commence</a>
 						</div>
 
 						<div class="column-2 image">
@@ -292,9 +298,9 @@
 			<section id="team" class="blog section">
 				<div class="container">
 					<div class="section-header">
-						<h3 class="title" data-title="WEBMAKER">OUR TEAM</h3>
+						<h3 class="title" data-title="WEBMAKER">Notre Equipe</h3>
 						<p class="text">
-							We represent our work team which is represented in the form of 3 IT engineers
+							Nous représentons notre équipe de travail qui est représentée sous la forme de 3 ingénieurs en informatique
 						</p>
 					</div>
 
@@ -313,12 +319,9 @@
 										<h5 class="blog-user">
 											<i class="fas fa-user"></i>Mohamed Sarrou</h5>
 									</div>
-									<h3 class="title-sm">IT developer
+									<h3 class="title-sm" style="margin-top: 15px; ">IT developer
 									</h3>
-									<p class="blog-text">
-										Lorem ipsum, dolor sit amet elit. rem poimus? Tempora
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                    expedita eos autem! Lorem ipsum, dolor sit met.
-									</p>
+
 
 									<div class="blog-info"></div>
 								</div>
@@ -328,7 +331,7 @@
 						<div class="blog-wrap">
 							<div class="blog-card">
 								<div class="blog-image">
-									<img src="{{asset('img/team_3.png')}}"  alt=""/>
+									<img src="{{asset('img/team_3.png')}}" alt=""/>
 								</div>
 
 								<div class="blog-content">
@@ -337,11 +340,8 @@
 										<h5 class="blog-user">
 											<i class="fas fa-user"></i>Hamza EL mansouri</h5>
 									</div>
-									<h3 class="title-sm">Designer & web developer</h3>
-									<p class="blog-text">
-										Lorem ipsum, dolor sit amet elit. Sint atque culpa repellat
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                    sunt sit amet nobis! Lorem ipsum dolor sit amet.
-									</p>
+									<h3 class="title-sm" style="margin-top: 15px;">Designer & web developer</h3>
+
 
 								</div>
 							</div>
@@ -357,14 +357,11 @@
 									<div class="blog-info">
 										<h5 class="blog-date"></h5>
 										<h5 class="blog-user">
-											<i class="fas fa-user"></i>EL Fahlaoui Mohamed</h5>
+											<i class="fas fa-user"></i>
+											Fahlaoui Mohamed</h5>
 									</div>
-									<h3 class="title-sm">IA & Web   developer
+									<h3 class="title-sm" style="margin-top: 15px;">IA & Web   developer
 									</h3>
-									<p class="blog-text">
-										Lorem ipsum dolor sit, amet elit. enim numquam, laborum
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                    earum? Lorem ipsum dolor sit amet.
-									</p>
 
 								</div>
 							</div>
@@ -374,4 +371,4 @@
 			</body>
 		</body>
 	</html>
-</body></html></div></body></html></body></html></section></body></html> </main> <footer class="footer"><div class="container"><div class="grid-4"><div class="grid-4-col footer-about"><h3 class="title-sm">About</h3><p class="text">we specialize in website creation and SEO, web and desktop application development and digital marketing solutions</p><p class="text">Tel : +212-762914480</p><p class="text">Email : webmakerfes@gmail.com</p></div><div class="grid-4-col footer-links"><h3 class="title-sm">Links</h3><ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="{{ path( 'app_demande_new') }}">Start Project</a></li><li><a href="#testimonials">Testimonials</a></li><a href="{{ path( 'app_contact_new') }}" class="nav-item nav-link">Contact</a></ul></div><div class="grid-4-col footer-links"><h3 class="title-sm">Avantages</h3><ul><li><a href="#">Qualité</a></li><li><a href="#">Fiablité</a></li><li><a href="#">Performance</a></li><li><a href="#">Simplicité</a></li><li><a href="#">Maintenance</a></li></ul></div><div class="grid-4-col footer-newstletter"><h3 class="title-sm">Subscribe</h3><p class="text">Joignez notre liste de diffusion pour recevoir toutes les nouvelles et les annonces.</p><div class="footer-input-wrap"><input type="email" class="footer-input" placeholder="Email"/><a href="#" class="input-arrow"><i class="fas fa-angle-right"></i></a></div></div></div><div class="bottom-footer"><div class="copyright"><p class="text">Copyright&copy;2021  | Made by<a href="https://www.linkedin.com/in/mohamed-serrou-579316217/"><span>WEBMAKER</span></a></p></div><div class="followme-wrap"><div class="followme"><h3>Follow Us</h3><span class="footer-line"></span><div class="social-media"><a href="https://www.facebook.com/simo.serrou.2000/"><i class="fab fa-facebook-f"></i></a><a href="https://twitter.com/SerrouMohamed"><i class="fab fa-twitter"></i></a><a href="https://www.instagram.com/simo_sarrou/"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/in/mohamed-serrou-579316217/"><i class="fab fa-linkedin-in"></i></a></div></div><div class="back-btn-wrap"><a href="#" class="back-btn"><i class="fas fa-chevron-up"></i></a></div></div></div></div> </footer> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <script src="{{asset('js/isotope.pkgd.min.js')}}"></script> <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <script src="{{asset('js/app.js')}}"></script></body>{% endblock %}</html>
+</body></html></div></body></html></body></html></section></body></html> </main> <footer class="footer"><div class="container"><div class="grid-4"><div class="grid-4-col footer-about"><h3 class="title-sm">Webmaker</h3><p class="text">Votre accompagnant vers le monde digital en poursuivant un processus professionnel pour la réalisation de vos besoins.</p><p class="text">Tel : +212 704-510166</p><p class="text">Email : webmakerfes@gmail.com</p></div><div class="grid-4-col footer-links"><h3 class="title-sm">Links</h3><ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="{{ path( 'app_demande_new') }}">Start Project</a></li><a href="{{ path( 'app_contact_new') }}" class="nav-item nav-link">Contact</a></ul></div><div class="grid-4-col footer-links"><h3 class="title-sm">Avantages</h3><ul><li><a href="#">Qualité</a></li><li><a href="#">Fiablité</a></li><li><a href="#">Performance</a></li><li><a href="#">Simplicité</a></li><li><a href="#">Maintenance</a></li></ul></div><div class="grid-4-col footer-newstletter"><h3 class="title-sm">Subscribe</h3><p class="text">Joignez notre liste de diffusion pour recevoir toutes les nouvelles et les annonces.</p><div class="footer-input-wrap"><input type="email" class="footer-input" placeholder="Email"/><a href="#" class="input-arrow"><i class="fas fa-angle-right"></i></a></div></div></div><div class="bottom-footer"><div class="copyright"><p class="text">Copyright&copy;2021  | Made by<a href="https://www.linkedin.com/in/mohamed-serrou-579316217/"><span>WEBMAKER</span></a></p></div><div class="followme-wrap"><div class="followme"><h3>Follow Us</h3><span class="footer-line"></span><div class="social-media"><a href="https://www.facebook.com/simo.serrou.2000/"><i class="fab fa-facebook-f"></i></a><a href="https://twitter.com/SerrouMohamed"><i class="fab fa-twitter"></i></a><a href="https://www.instagram.com/simo_sarrou/"><i class="fab fa-instagram"></i></a><a href="https://www.linkedin.com/in/mohamed-serrou-579316217/"><i class="fab fa-linkedin-in"></i></a></div></div><div class="back-btn-wrap"><a href="#" class="back-btn"><i class="fas fa-chevron-up"></i></a></div></div></div></div> </footer> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <script src="{{asset('js/isotope.pkgd.min.js')}}"></script> <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <script src="{{asset('js/app.js')}}"></script></body>{% endblock %}</html>

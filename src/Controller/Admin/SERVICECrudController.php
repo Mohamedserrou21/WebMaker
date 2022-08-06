@@ -39,7 +39,7 @@ class SERVICECrudController extends AbstractCrudController
                 )
                 ->setFormType(VichImageType::class),
 
-            TextField::new('context'),
+            TextareaField::new('context'),
             DateField::new('updatedAt'),
         ];
     }
