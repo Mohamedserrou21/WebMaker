@@ -1166,6 +1166,15 @@ header .circle {
     font-size: 1rem;
     transition: 0.3s;
 }
+.label-input {
+   
+   
+   
+    
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
 
 .contact-input::placeholder {
     font-weight: 400;

@@ -18,7 +18,7 @@ class Demande
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 , nullable=true)
      */
     private $societe;
 
@@ -28,12 +28,12 @@ class Demande
     private $fullname;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 , nullable=true)
      */
     private $secteur;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 , nullable=true)
      */
     private $ville;
 
@@ -54,7 +54,7 @@ class Demande
     private $service;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @ORM\Column(type="string", length=500 , nullable=true)
      */
     private $message;
 

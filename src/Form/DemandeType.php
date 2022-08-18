@@ -18,9 +18,8 @@ class DemandeType extends AbstractType
             ->add('ville')
             ->add('tele')
             ->add('email')
-            ->add('message')
-            ->add('service')
-        ;
+
+            ->add('service');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

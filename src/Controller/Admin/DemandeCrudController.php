@@ -25,7 +25,7 @@ class DemandeCrudController extends AbstractCrudController
             TextField::new('ville'),
             AssociationField::new('service'),
             TextField::new('tele'),
-            TextField::new('message'),
+
         ];
     }
 }

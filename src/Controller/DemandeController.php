@@ -35,9 +35,10 @@ class DemandeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('success', 'Demande envoye par succes! merci pour votre confiance');
             $demandeRepository->add($demande, true);
 
-            return $this->redirectToRoute('app_demande_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_demande_new', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('demande/new.html.twig', [
@@ -81,7 +82,7 @@ class DemandeController extends AbstractController
      */
     public function delete(Request $request, Demande $demande, DemandeRepository $demandeRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$demande->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $demande->getId(), $request->request->get('_token'))) {
             $demandeRepository->remove($demande, true);
         }
 
