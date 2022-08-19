@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 19 juil. 2022 à 16:39
+-- Généré le : ven. 19 août 2022 à 13:39
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 8.1.4
 
@@ -81,13 +81,13 @@ INSERT INTO `contact` (`id`, `firstname`, `lastname`, `phone`, `email`, `message
 CREATE TABLE `demande` (
   `id` int(11) NOT NULL,
   `service_id` int(11) NOT NULL,
-  `societe` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `societe` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fullname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `secteur` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ville` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `secteur` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ville` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tele` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `message` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
+  `message` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -95,7 +95,10 @@ CREATE TABLE `demande` (
 --
 
 INSERT INTO `demande` (`id`, `service_id`, `societe`, `fullname`, `secteur`, `ville`, `tele`, `email`, `message`) VALUES
-(1, 1, 'webmaker', 'sarrou mohamed', 'graphiques', '0762914480', '0762914480', 'mohamedserrou2016@gmail.com', 'merci');
+(1, 1, 'webmaker', 'sarrou mohamed', 'graphiques', '0762914480', '0762914480', 'mohamedserrou2016@gmail.com', 'merci'),
+(2, 2, NULL, 'amine filali', 'digitale', NULL, '0762914480', 'mohamedserrou2016@gmail.com', 'merci'),
+(3, 2, NULL, 'amine filali2', 'digitale', NULL, '0762914480', 'mohamedserrou2016@gmail.com', 'merci'),
+(4, 3, NULL, 'sarrou', NULL, NULL, '0762914480', 'sarrou@gmail.com', NULL);
 
 -- --------------------------------------------------------
 
@@ -120,7 +123,10 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 ('DoctrineMigrations\\Version20220717160752', '2022-07-17 16:08:01', 48),
 ('DoctrineMigrations\\Version20220718022041', '2022-07-18 02:20:52', 59),
 ('DoctrineMigrations\\Version20220718145204', '2022-07-18 14:52:08', 67),
-('DoctrineMigrations\\Version20220719112747', '2022-07-19 11:27:56', 111);
+('DoctrineMigrations\\Version20220719112747', '2022-07-19 11:27:56', 111),
+('DoctrineMigrations\\Version20220818224954', '2022-08-18 22:50:05', 68),
+('DoctrineMigrations\\Version20220818225832', '2022-08-18 22:58:35', 55),
+('DoctrineMigrations\\Version20220818231458', '2022-08-18 23:15:02', 60);
 
 -- --------------------------------------------------------
 
@@ -180,9 +186,9 @@ CREATE TABLE `service` (
 --
 
 INSERT INTO `service` (`id`, `titre`, `context`, `image`, `updated_at`) VALUES
-(1, 'devloppement web', 'The web development process involves taking the graphical elements defined in the design process and coding them into a custom template.', 'browser.png', '2022-07-08 00:00:00'),
-(2, 'Wordpress Development', 'Wordpress process involves taking the graphical elements defined in the design process and coding them into a custom Wordpress theme.', 'WordPress-logotype-wmark.png', '2022-07-08 16:28:45'),
-(3, 'Desktop Application', 'Wordpress process involves taking the graphical elements defined in the design process and coding them into a custom Wordpress theme.', 'WhatsApp Image 2022-07-06 at 20.40.13.jpeg', '2022-07-08 16:29:40');
+(1, 'Devloppement Web', 'Dans ce service notre équipe vous propose des sites web de haute qualité , sécurisé , rapide qui vous permet de réaliser votre objectif, cela est assurer par une équipe d\'ingénieure fiable et compétents .', 'browser.png', '2022-07-08 00:00:00'),
+(2, 'IA Devloppement', 'Notre équipe s\'occupe de crée des projets artificielle avec des techniques plus avancées dans le monde informatique , l’intelligence artificielle  est devenue l’avenir des technologies informatique', 'WhatsApp Image 2022-08-10 at 20.54.33.jpeg', '2022-08-18 00:00:00'),
+(3, 'Desktop Application', 'Notre société  vous permet de crée votre application bureau sécurise ,rapide, fiable, performant , avec un suivi de notre équipe des ingénieures compétents qui vise de vous satisfait .', 'WhatsApp Image 2022-08-03 at 12.45.23.jpeg', '2022-08-03 00:00:00');
 
 --
 -- Index pour les tables déchargées
@@ -255,7 +261,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT pour la table `demande`
 --
 ALTER TABLE `demande`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `messenger_messages`
